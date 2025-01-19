@@ -1,6 +1,6 @@
 # Library Book Loan Management Application
 ## OBJECTIVE: Create a Web Application for Library Book Loan Management.
-## TECHNOLOGIES USED: ASP.NET Core, Entity Framework Core, C#, Bootstrap, LINQ, SQL Database.
+## TECHNOLOGIES USED: ASP.NET Core, C#, Bootstrap, SQL Database.
 ## TASK DESCRIPTION:
 o Develop a web server application using C#, ASP.NET Core 6, MVC.
 
@@ -16,8 +16,8 @@ o Use a local database (LocalDB) to store/manage data on books and loans.
 
 
 ## SKILLS: 
-· Software Development · Entity Framework Core · ASP.NET MVC · Back-end Web Development 
-· SQL · Bootstrap · C# · ASP.NET Core · Databases · Without ORM · LINQ · Database First · Without Entity Framework
+· Software Development · ASP.NET MVC · Back-end Web Development 
+· SQL · Bootstrap · C# · ASP.NET Core · Databases · Without ORM · Without Entity Framework
 
 
 
@@ -25,7 +25,7 @@ o Use a local database (LocalDB) to store/manage data on books and loans.
 
 # Application de gestion de prêts de livres d’une bibliothèque
 ## OBJECTIF: Créer une Application Web de Gestion de Prêts de Livres d’une bibliothèque.
-## TECHNOLOGIES UTILISÉES: ASP.NET Core, Entity Framework Core, C#, Bootstrap, LINQ, BD SQL.
+## TECHNOLOGIES UTILISÉES: ASP.NET Core, C#, Bootstrap, LINQ, BD SQL.
 ## DESCRIPTION DES TACHES :
 o Développer une application serveur web avec C#, ASP.NET Core 6, MVC.
 
@@ -41,5 +41,5 @@ o Utiliser une base de données locale (LocalDB) pour stocker / gérer les donn�
 
 
 ## Compétences :
-· Développement de logiciels · Entity Framework Core · ASP.NET MVC · Développement web back-end 
-· SQL · Bootstrap · C# · ASP.NET Core · Bases de données · Sans ORM · LINQ · Database first · sans Entity Framework
+· Développement de logiciels · ASP.NET MVC · Développement web back-end 
+· SQL · Bootstrap · C# · ASP.NET Core · Bases de données · Sans ORM  · sans Entity Framework
