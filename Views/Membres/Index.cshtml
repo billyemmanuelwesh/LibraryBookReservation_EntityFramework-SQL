@@ -1,0 +1,47 @@
+﻿@model IEnumerable<GPLCC.Models.Membre>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h5 class="m">Liste des membres </h5>
+
+<p>
+    <a asp-action="Create" class="membre"><img src="~/images/membre.png"> Ajouter un membre</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Numero)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Prenom)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Numero)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prenom)
+            </td>
+            <td>
+                    @Html.ActionLink("", "Edit", new {  id=item.Numero } ,new { @class="fa fa-edit",@title="Modifier" }) 
+                    @Html.ActionLink("", "Details", new { id=item.Numero },new { @class="fa fa-th-list",@title="Informations" }) 
+                    @Html.ActionLink("", "Delete", new { id=item.Numero },new { @class="fa fa-remove",@title="Supprimer" })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

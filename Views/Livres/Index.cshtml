@@ -1,0 +1,57 @@
+﻿@model IEnumerable<GPLCC.Models.Livre>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h5 class="l">Liste des livres</h5>
+
+<p>
+    <a asp-action="Create" class="livre"><img src="~/images/livre.png"> Ajouter un livre</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Numero)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Titre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Auteur)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Categorie)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Numero)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Titre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Auteur)
+            </td>
+            <td>
+                @{
+                    // pour afficher : Enfant, Adulte, Jenesse à la place de 1, 2, 3 ect...
+                    String maCategorie = ViewBag.MesCategories[item.Categorie];
+                }
+                @Html.DisplayFor(modelItem => maCategorie)
+            </td>
+            <td>
+                @Html.ActionLink("", "Edit", new { id=item.Numero  }, new { @class="fa fa-edit",@title="Modifier"}) 
+                @Html.ActionLink("", "Details", new { id=item.Numero  },new { @class="fa fa-th-list",@title="Informations" }) 
+                @Html.ActionLink("", "Delete", new { id=item.Numero  },new { @class="fa fa-remove",@title="Supprimer"})
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

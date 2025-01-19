@@ -1,0 +1,52 @@
+﻿@model GPLCC.Models.Pret
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Ajouter un emprunt</h1>
+
+<h4>Pret de livres</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+             <div class="form-group">
+                <label asp-for="Numero" type = hidden class="control-label">Numero du pret</label>
+                <input type= Hidden asp-for="Numero" class="form-control" value="@ViewBag.ProchainNumero" />
+                <span asp-validation-for="Numero" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Membre.Numero" class="control-label">Numero de membre</label>
+                <select asp-for="Membre.Numero" asp-items="ViewBag.Membres" class="form-control">
+                    <option value="">Choisir un Membre</option>
+                </select>
+                <span asp-validation-for="Membre.Numero" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Livre.Numero" class="control-label">Numero du livre</label>
+                <select asp-for="Livre.Numero" asp-items="ViewBag.Livres" class="form-control">
+                    <option value="">Choisir un Livre</option>
+                </select>
+                <span asp-validation-for="Livre.Numero" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateDebut" class="control-label"></label>
+                <input asp-for="DateDebut" class="form-control" />
+                <span asp-validation-for="DateDebut" class="text-danger"></span>
+            </div>
+             <div class="form-group">
+                <br /><input type="submit" value="Ajouter" class="btn btn-success" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <br /><a asp-action="Index" class="btn btn-primary">Liste des emprunts</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

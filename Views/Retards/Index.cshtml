@@ -1,0 +1,49 @@
+﻿@model IEnumerable<GPLCC.Models.Retard>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h5 class="r">Liste des retards</h5>
+
+<p>
+    <img src="~/images/retard.png">
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Numéro de membre
+            </th>
+            <th>
+                Nom et Prénom
+            </th>
+            <th>
+                Titre du livre
+            </th>
+            <th>
+                Nombre de jours de retard
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.pretLie.Membre.Numero) 
+            </td>
+             <td>
+                    @Html.DisplayFor(modelItem => item.pretLie.Membre.Nom) @Html.DisplayFor(modelItem => item.pretLie.Membre.Prenom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.pretLie.Livre.Titre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NbJoursRetard)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
